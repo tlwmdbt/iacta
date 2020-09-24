@@ -14,6 +14,11 @@ while True:
                 continue
             break
         except ValueError:
+            if "quit" in dice:
+                raise SystemExit
+
+            print("Zahl zwischen 1 und 10, quit um zu beenden.")
+
             continue
         else:
             print("Nein, nochmal, Zahlen zwischen 1 bis 10.")
@@ -33,6 +38,10 @@ while True:
                 continue
             break
         except ValueError:
+            if "quit" in dice_typ:
+                raise SystemExit
+
+            print("Zahl zwischen 1 und 100, quit um zu beenden.")
             continue
         else:
             print("Nein, nochmal, Zahlen zwischen 1 bis 100.")
@@ -66,8 +75,12 @@ while True:
 
     # Würfe generieren:
     i = 1
+    actual_throw_tmp = 0
 
     while i <= int_dice:
         actual_throw = randint(1, int_dice_typ)
+        actual_throw_tmp = actual_throw_tmp + actual_throw
         print("Wurf", i, ":", actual_throw)
+        
         i = i + 1
+    print("Gesammte Augenanzahl:", actual_throw_tmp)
