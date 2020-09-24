@@ -1,2 +1,2 @@
-# iacta
-Würfelsimulator
+# Alea Iacta
+Ein interaktiver Würfelsimulator.
