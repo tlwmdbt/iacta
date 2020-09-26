@@ -63,10 +63,7 @@ while True:
             #print("Benutze /dev/urandom.")
             break
         except ImportError:
-            # Modul urandom nicht vorhanden, darum eingebaute python random 
-            # Funktion benutzen um den Random Generator zu initialisieren
-            #print("Benutze standard randint().")
-            seed(randint(1, 1000))
+            # Modul urandom nicht vorhanden
             break
         else:
             # Geht beides nich, auf wiedersehen! ¯\_(ツ)_/¯ 
